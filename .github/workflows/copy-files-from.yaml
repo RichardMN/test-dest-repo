@@ -39,7 +39,7 @@ jobs:
       run: |
         mkdir /tmp/target
         git clone https://.:${{ secrets.GITHUB_TOKEN }}@github.com/RichardMN/covidregionaldatagraphs /tmp/target
-        cp -pR /tmp/target/extra/output .
+        cp -pR /tmp/target/extra/output docs/covidregionaldatagraphs
 #        git add .
 #        git diff-index --quiet HEAD || git commit -m "Automatic publish from github.com/project"
 #        git commit
@@ -48,4 +48,4 @@ jobs:
       uses: EndBug/add-and-commit@v7
       with:
         message: 'Update rendered graphs'
-        add: 'extra'
+        add: 'docs/covidregionaldatagraphs'
